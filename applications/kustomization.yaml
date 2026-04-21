@@ -7,3 +7,5 @@ resources:
   - openshift-gitops-operator.yaml  # sync-wave-0
   - openshift-gitops-cluster.yaml   # sync-wave-1
   - openshift-pipelines-operator.yaml # sync-wave-2
+  - openshift-serverless-operator.yaml # sync-wave-3
+  - openshift-serverless.yaml # sync-wave-4

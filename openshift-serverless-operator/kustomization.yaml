@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   - namespace.yaml # sync-wave-0
-  - namespace-openshift-gitops-applications.yaml # sync-wave-0
-  - cluster-argocd.yaml # sync-wave-1
+  - operator-group.yaml # sync-wave-1
+  - subscription.yaml # sync-wave-2

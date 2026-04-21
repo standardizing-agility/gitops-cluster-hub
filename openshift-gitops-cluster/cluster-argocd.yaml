@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
   name: cluster-argocd
+  namespace: openshift-gitops-cluster
 spec:
   rbac:
     policy: 'g, rbacsystem:cluster-admins, role:admin'
