@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: openshift-gitops-operator
+namespace: openshift-gitops-operator
+resources:
+  - namespace.yaml # sync-wave-0
+  - operator-group.yaml # sync-wave-1
+  - subscription.yaml # sync-wave-2
