@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: openshift-gitops-cluster
+
+namespace: openshift-cluster-gitops
+
 resources:
   - openshift-gitops-operator.yaml  # sync-wave-0
   - openshift-gitops-cluster.yaml   # sync-wave-1

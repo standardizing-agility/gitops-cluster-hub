@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: openshift-gitops-operator
+  name: openshift-cluster-gitops
   labels:
     openshift.io/cluster-monitoring: "true"
   annotations:
