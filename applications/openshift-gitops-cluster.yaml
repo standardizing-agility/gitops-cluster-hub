@@ -14,7 +14,7 @@ spec:
     path: openshift-gitops-cluster
   destination:
     server: https://kubernetes.default.svc
-    namespace: openshift-cluster-gitops
+    namespace: openshift-gitops-cluster
   syncPolicy:
     automated:
       prune: true

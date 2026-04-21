@@ -5,10 +5,10 @@
 set -euo pipefail
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-ROOT=$(cd "${SCRIPT_DIR}/.." && pwd)
+ROOT=$(cd "${SCRIPT_DIR}" && pwd)
 
 OPERATOR_NAMESPACE="${OPERATOR_NAMESPACE:-openshift-gitops-operator}"
-CLUSTER_GITOPS_NAMESPACE="${CLUSTER_GITOPS_NAMESPACE:-openshift-cluster-gitops}"
+CLUSTER_GITOPS_NAMESPACE="${CLUSTER_GITOPS_NAMESPACE:-openshift-gitops-cluster}"
 ARGOCD_INSTANCE_NAME="${ARGOCD_INSTANCE_NAME:-cluster-argocd}"
 CSV_TIMEOUT_SEC="${CSV_TIMEOUT_SEC:-600}"
 ARGOCD_TIMEOUT_SEC="${ARGOCD_TIMEOUT_SEC:-600}"
