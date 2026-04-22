@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   - namespace.yaml # sync-wave-0
   - argocd-knative-rbac.yaml # sync-wave-0
+  - argocd-acm-rbac.yaml # sync-wave-0
   - cluster-argocd.yaml # sync-wave-1

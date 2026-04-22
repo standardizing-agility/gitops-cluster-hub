@@ -9,3 +9,4 @@ resources:
   - openshift-pipelines-operator.yaml # sync-wave-2
   - openshift-serverless-operator.yaml # sync-wave-3
   - openshift-serverless.yaml # sync-wave-4
+  - advanced-cluster-management.yaml # sync-wave-5
