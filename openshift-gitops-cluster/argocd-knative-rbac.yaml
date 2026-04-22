@@ -1,0 +1,30 @@
+# Grants cluster-argocd's application controller permission to apply Knative
+# KnativeServing / KnativeEventing CRs and their namespaces (openshift-serverless app).
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cluster-argocd-knative-operands
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+rules:
+  - apiGroups: ["operator.knative.dev"]
+    resources: ["*"]
+    verbs: ["*"]
+  - apiGroups: [""]
+    resources: ["namespaces"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-argocd-knative-operands
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-argocd-knative-operands
+subjects:
+  - kind: ServiceAccount
+    name: cluster-argocd-argocd-application-controller
+    namespace: openshift-gitops-cluster
